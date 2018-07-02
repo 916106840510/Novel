@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <title><%= title %></title>
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a href="/index" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>F</b>NC</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Novel</b></span>
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account Menu -->
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="/index" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- The user image in the navbar-->
+                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!--&lt;!&ndash; The user image in the menu &ndash;&gt;-->
+                            <!--<li class="user-header">-->
+                            <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+                            <!--<p>-->
+                            <!--&lt;!&ndash;<small>Member since Nov. 2012</small>&ndash;&gt;-->
+                            <!--</p>-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash; Menu Body &ndash;&gt;-->
+                            <!--<li class="user-body">-->
+                            <!--&lt;!&ndash; /.row &ndash;&gt;-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash; Menu Footer&ndash;&gt;-->
+                            <!--<li class="user-footer">-->
+                            <!--<div class="pull-right-container">-->
+                            <!--<a href="/logout" class="btn btn-default btn-flat">退出</a>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p></p>
+                    <!-- Status -->
+                    <a href="/index"><i class="fa fa-circle text-success"></i> 用户</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">目 录</li>
+                <!-- Optionally, you can add icons to the links -->
+                <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+                <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="#">Link in level 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Novel
+                <small></small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/index"><i class="fa fa-dashboard active"></i> 主页</a></li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+
+                <div class="col-md-12 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Novel_list</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label>Select</label>
+                                <select id="type" class="form-control">
+                                </select>
+                            </div>
+                            <table id="novel_table">
+                                <thead>
+                                    <tr>
+                                        <th>小说名</th>
+                                        <th>作者</th>
+                                        <th>更新状态</th>
+                                        <th>总字数</th>
+                                        <th>最后更新</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2018 <a href="#">LZJ</a>.</strong> All rights reserved.
+    </footer>
+</div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script>
+    let getNovelType = function () {
+        $.ajax({
+            url: "/novel/type",
+            type: "get",
+            data: {},
+            success: function (data) {
+                let type_option = "";
+                data.forEach(function (type) {
+                    type_option += '<option>' + type['type'] + '</option>'
+                });
+                $('#type').append(type_option);
+            },
+            error: function (e) {
+                alert(e);
+            }
+        });
+    };
+    let getNovelByType = function (type) {
+        $.ajax({
+            url: "/novel",
+            type: "post",
+            data: {
+                "type": type
+            },
+            success: function (data) {
+                let novel_table = '<thead>' +
+                    '<tr>' +
+                    '<th>编号</th>' +
+                    '<th>小说名</th>' +
+                    '<th>总字数</th>' +
+                    '<th>最后更新</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '<tbody>';
+                for (let i = 0; i < data.length; i++) {
+                    novel_table += '<tr><td>' + (i + 1) + '</td>' +
+                        '<td id="tds">' + data[i].title + '</td>' +
+                        '<td id="tds">' + data[i].length + '</td>' +
+                        '<td id="tds">' + data[i].last_update + '</td>' +
+                        '</tr>'
+                }
+                novel_table += '</tbody>';
+                $('#novel_table').append(novel_table).dataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': false,
+                    'ordering': true,
+                    // 'info'        : true,
+                    'autoWidth': true
+                });
+            },
+            error: function (err) {
+                alert(err);
+            }
+        });
+    };
+    getNovelType();
+    // // getNovelByType('都市言情');
+    // $('#type').change(function () {
+    //     let type = $('#type').select().val();
+    //     getNovelByType(type);
+    // });
+    $('#novel_table').dataTable({
+        ajax: {
+            url: "/novel",
+            type: "post",
+            data: {
+                "type": "都市言情"
+            }
+        },
+        // deferRender: false,
+        columns: [
+            {"data": "title"},
+            {"data": "author"},
+            {"data": "status"},
+            {"data": "length"},
+            {"data": "last_update"}
+        ],
+    });
+
+</script>
+</html>
